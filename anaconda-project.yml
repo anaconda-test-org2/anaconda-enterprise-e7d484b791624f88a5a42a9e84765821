@@ -249,6 +249,8 @@ env_specs:
     channels: []
 commands:
   default:
-    windows: dir
-    unix: ${PROJECT_DIR}/test.py
+    unix: python ${PROJECT_DIR}/test.py
+    supports_http_options: true
+  my-command:
+    unix: python ${PROJECT_DIR}/testing2.py
     supports_http_options: true

@@ -21,7 +21,7 @@ class HelloHandler(BaseHTTPRequestHandler):
        # dirlist = os.listdir('~/var/run/secrets/user_credentials/')
        # self.wfile.write(b""+json.dumps(dirlist)+"")     
         
-        Key_path = '/var/run/secrets/user_credentials/<your key>'
+        Key_path = '/var/run/secrets/user_credentials/RidaZubair'
        
         File = open( Key_path , "rt")
         Value = File.read()
