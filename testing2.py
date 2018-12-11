@@ -25,7 +25,7 @@ class HelloHandler(BaseHTTPRequestHandler):
         #self.wfile.write(b"</body></html>")
         #self.wfile.close()
         dirlist = os.listdir('/var/run/secrets/user_credentials/')  
-        self.wfile.write(dirlist)  
+        self.wfile.write(json.dumps(dirlist).encode())   
         return
                          
         
