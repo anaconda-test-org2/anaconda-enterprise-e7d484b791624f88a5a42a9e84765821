@@ -24,8 +24,8 @@ class HelloHandler(BaseHTTPRequestHandler):
         #self.wfile.write(bytes(self.path , "utf-8")
         #self.wfile.write(b"</body></html>")
         #self.wfile.close()
-        dirlist = os.listdir('~/var/')   # Change the path here
-        self.wfile.write(b""+json.dumps(dirlist)+"")     #------------------- (isy change krna hai)
+        dirlist = os.listdir('~/var/run/secrets/user_credentials/')  
+        self.wfile.write(b""+json.dumps(dirlist)+"")     
         return
                          
         
@@ -53,7 +53,7 @@ parser.add_argument('--anaconda-project-iframe-hosts', action='append', help='Sp
 parser.add_argument('--anaconda-project-address', action='store', default='0.0.0.0', help='IP address the application should listen on.')
 
 
-if _name_ == '__main__':
+if __name__ == '__main__':
     # This app accepts all anaconda-project http options, but ignores most of them.
     args = parser.parse_args(sys.argv[1:])
     runserver(address=args.anaconda_project_address, port=args.anaconda_project_port)
