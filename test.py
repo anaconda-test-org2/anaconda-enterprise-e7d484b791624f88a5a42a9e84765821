@@ -18,8 +18,8 @@ class HelloHandler(BaseHTTPRequestHandler):
         self.send_header('Content-type', 'text/html')
         self.end_headers()
         
-        dirlist = os.listdir('~/var/run/secrets/user_credentials/')   # Change the path here
-        self.wfile.write(b""+json.dumps(dirlist)+"")     #------------------- (isy change krna hai)
+       # dirlist = os.listdir('~/var/run/secrets/user_credentials/')
+       # self.wfile.write(b""+json.dumps(dirlist)+"")     
         
         Key_path = '/var/run/secrets/user_credentials/<your key>'
        
